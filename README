@@ -1,0 +1,16 @@
+Buildout recipe for python-libevent
+========================================================================
+
+This buildout recipe can be used to build the python-libevent module and
+link libevent itself statically.
+
+Add the following section to your buildout script::
+
+    [python-libevent]
+    recipe = buildout.python_libevent
+    eggs = python-libevent
+    libevent = http://sourceforge.net/projects/levent/files/libevent/libevent-2.0/libevent-2.0.13-stable.tar.gz
+
+"libevent" points to a released tarball of libevent which will be downloaded
+and compiled using the regular "configure && make" and will be used to build
+python-libevent.
